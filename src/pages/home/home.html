@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Google Maps
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div #map id="map"></div>
+  <ion-item style="height:7%">
+    <ion-label>Filter</ion-label>
+    <ion-select [(ngModel)]="connectorTypesSelected" (ngModelChange)="filterMarkers($event)">
+      <ion-option *ngFor="let connectorType of connectorTypesFilters" [value]="connectorType">{{connectorType}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item style="height:13%">
+      <button ion-button block (click)="openModal()">Go to</button>
+      <button ion-button block (click)="clearAll()">Clear All Filters</button>
+  </ion-item>
+</ion-content>

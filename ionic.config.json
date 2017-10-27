@@ -1,0 +1,14 @@
+{
+  "name": "ionic-maps",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://chargepoints.dft.gov.uk/api"
+    }
+  ]
+}
